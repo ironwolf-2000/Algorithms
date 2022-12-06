@@ -28,10 +28,10 @@ def ternarySearch(nums: list[int], target: int) -> int:
     return -1
 
 
-nums = [1, 2, 3, 3, 3, 4, 7, 9]
+nums = [1, 2, 2, 2, 2, 3, 3, 3, 4, 7, 9]
 
 print(ternarySearch(nums, 0))  # -1
-print(ternarySearch(nums, 1))  # 0
-print(ternarySearch(nums, 3))  # 2
-print(ternarySearch(nums, 9))  # 7
+print(ternarySearch(nums, 2))  # 3
+print(ternarySearch(nums, 3))  # 7
+print(ternarySearch(nums, 9))  # 10
 print(ternarySearch(nums, 10))  # -1
