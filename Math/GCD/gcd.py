@@ -32,6 +32,9 @@ def gcd(*values: int):
         res = _gcd(res, el)
     return res
 
+    # shorter syntax:
+    # return reduce(_gcd, values, 0)
+
 
 print(gcd(25, 50, 15))  # 5
 print(gcd(38, 57))  # 19
