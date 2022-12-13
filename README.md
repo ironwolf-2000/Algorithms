@@ -7,34 +7,48 @@
 
 ## Overview
 
-My implementation of all common algorithms. I keep adding new ones every day. If you have any suggestions, feel free to open an issue.
+An open library of common algorithms implemented in Python.
 
 ## Implemented Algorithms
 
-### Searching
+<details>
+<summary>Math</summary>
 
-#### Binary Search
+-   Convex Hull
+    -   Graham Scan
+    -   Jarvis March
+    -   Monotone Chain
+-   GCD
+-   LCM
+-   Sieve of Eratosthenes
 
-#### Exponential Search
+</details>
 
-#### Jump Search
+<details>
+<summary>Searching</summary>
 
-#### Quick Select
+-   Binary Search
+-   Exponential Search
+-   Jump Search
+-   Quick Select
+-   Ternary Search
 
-#### Ternary Search
+</details>
 
-### Sorting
+<details>
+<summary>Sorting</summary>
 
-#### Bubble Sort
+-   Bubble Sort
+-   Bucket Sort
+-   Counting Sort
+-   Insertion Sort
+-   Merge Sort
+    -   Iterative version
+    -   Recursive version
+-   Quick Sort
+    -   Three way partitioning
+    -   Two way partitioning
+-   Radix Sort
+-   Selection Sort
 
-#### Bucket Sort
-
-#### Counting Sort
-
-#### Insertion Sort
-
-#### Merge Sort
-
-#### Quick Sort
-
-#### Selection Sort
+</details>
