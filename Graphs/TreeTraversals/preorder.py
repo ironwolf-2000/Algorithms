@@ -29,10 +29,9 @@ def preorderR(root: TreeNode | None) -> list[int]:
 def preorderI(root: TreeNode | None) -> list[int]:
     """
     N = number of nodes in the tree
-    H = height of the tree
     -------------
     Time: O(N)
-    Space: O(H)
+    Space: O(N)
     """
     stack = [root]
     res = []
@@ -51,9 +50,9 @@ root = TreeNode(7, [TreeNode(1), TreeNode(2, [TreeNode(0), TreeNode(3, [TreeNode
 print(preorderR(root))  # [7, 1, 2, 0, 3, 6, 4, 5]
 print(preorderI(root))  # [7, 1, 2, 0, 3, 6, 4, 5]
 
-root = TreeNode(1, [TreeNode(2, [TreeNode(3)])])
-print(preorderR(root))  # [1, 2, 3]
-print(preorderI(root))  # [1, 2, 3]
+root = TreeNode(1, [TreeNode(2), TreeNode(3), TreeNode(4), TreeNode(5)])
+print(preorderR(root))  # [1, 2, 3, 4, 5]
+print(preorderI(root))  # [1, 2, 3, 4, 5]
 
 root = None
 print(preorderR(root))  # []
