@@ -59,6 +59,10 @@ edges = [
     [4, 5, 1],
     [5, 2, 7],
     [5, 4, 1],
+    [6, 7, 5],
 ]
 
-dijkstra(edges, 1, 5)
+# min_dist=6: 1->3->4->5
+print(dijkstra(edges, 1, 5))  # 6
+
+print(dijkstra(edges, 1, 7))  # inf
