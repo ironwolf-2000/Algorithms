@@ -3,17 +3,14 @@ from heapq import heappop, heappush
 from math import inf
 
 
-def dijkstra(edges: list[list[int]], start: int, end: int) -> int:
+def dijkstra(G: list[list[tuple[int, int]]], start: int, end: int) -> int:
     """
     V = number of vertices in the graph
     E = number of edges in the graph
     -------------
     Time: O((V + E) * logV)
-    Space: O(V + E)
+    Space: O(V)
     """
-    G = defaultdict(list)
-    for u, v, w in edges:
-        G[u].append((v, w))
 
     dist = defaultdict(lambda: inf)
     dist[start] = 0
@@ -62,7 +59,11 @@ edges = [
     [6, 7, 5],
 ]
 
-# min_dist=6: 1->3->4->5
-print(dijkstra(edges, 1, 5))  # 6
+G = defaultdict(list)
+for u, v, w in edges:
+    G[u].append((v, w))
 
-print(dijkstra(edges, 1, 7))  # inf
+# min_dist=6: 1->3->4->5
+print(dijkstra(G, 1, 5))  # 6
+
+print(dijkstra(G, 1, 7))  # inf
