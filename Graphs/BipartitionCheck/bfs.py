@@ -1,7 +1,7 @@
 from collections import defaultdict, deque
 
 
-def isBipartite(graph: dict[list[int]]) -> bool:
+def isBipartite(graph: dict[int, list[int]]) -> bool:
     """
     V = number of vertices in the graph
     E = number of edges in the graph

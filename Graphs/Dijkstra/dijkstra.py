@@ -3,7 +3,7 @@ from heapq import heappop, heappush
 from math import inf
 
 
-def dijkstra(G: list[list[tuple[int, int]]], start: int, end: int) -> int:
+def dijkstra(G: list[list[tuple[int, int]]], start: int, end: int) -> float | int:
     """
     V = number of vertices in the graph
     E = number of edges in the graph

@@ -2,7 +2,7 @@ from math import atan2
 
 
 class GrahamScan:
-    def polar_angle(self, p1: list[int], p2: list[int]) -> int:
+    def polar_angle(self, p1: list[int], p2: list[int]) -> float:
         return atan2(p2[1] - p1[1], p2[0] - p1[0])
 
     def distSquared(self, p1: list[int], p2: list[int]) -> int:

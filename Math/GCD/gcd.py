@@ -1,5 +1,5 @@
 # v1: recursive
-def _gcd(a: int, b: int):
+def _gcd(a: int, b: int) -> int:
     """
     Time: O(log(a + b))
     Space: O(log(a + b))
@@ -8,7 +8,7 @@ def _gcd(a: int, b: int):
 
 
 # v2: iterative
-def _gcd(a: int, b: int):
+def _gcd(a: int, b: int) -> int:
     """
     Time: O(log(a + b))
     Space: O(1)
@@ -19,7 +19,7 @@ def _gcd(a: int, b: int):
 
 
 # similar to math.gcd
-def gcd(*values: int):
+def gcd(*values: int) -> int:
     """
     N = len(values)
     M = max(values)

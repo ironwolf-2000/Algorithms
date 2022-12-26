@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def topsort(graph: dict[list[int]]) -> list[int]:
+def topsort(graph: dict[int, list[int]]) -> list[int]:
     """
     V = number of vertices in the graph
     E = number of edges in the graph
@@ -10,7 +10,7 @@ def topsort(graph: dict[list[int]]) -> list[int]:
     Space: O(V)
     """
 
-    def dfs(u: int) -> None:
+    def dfs(u: int) -> bool:
         color[u] = 1  # visited
 
         for v in graph[u]:
@@ -27,7 +27,8 @@ def topsort(graph: dict[list[int]]) -> list[int]:
 
     for u in graph:
         if not color[u] and dfs(u):
-            return "Cycle found!"
+            print("Cycle found!")
+            return []
 
     return res[::-1]
 
@@ -49,4 +50,4 @@ graph = {
     2: [3],
     3: [1],
 }
-print(topsort(graph))  # Cycle found!
+print(topsort(graph))  # []

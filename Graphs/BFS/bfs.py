@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def bfs(graph: dict[list[int]], start: int) -> list[int]:
+def bfs(graph: dict[int, list[int]], start: int) -> list[int]:
     """
     V = number of vertices in the graph
     E = number of edges in the graph

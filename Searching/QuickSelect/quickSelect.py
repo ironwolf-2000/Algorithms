@@ -14,7 +14,7 @@ def partition(nums: list[int], lo: int, hi: int) -> int:
     return k - 1
 
 
-def _quickSelect(nums: list[int], k: int, lo: int, hi: int) -> None:
+def _quickSelect(nums: list[int], k: int, lo: int, hi: int) -> int | None:
     """
     N = len(nums)
     -------------
@@ -35,7 +35,7 @@ def _quickSelect(nums: list[int], k: int, lo: int, hi: int) -> None:
 
 
 # finds the k-th smallest value in nums
-def quickSelect(nums: list[int], k: int) -> int:
+def quickSelect(nums: list[int], k: int) -> int | None:
     return _quickSelect(nums, k, 0, len(nums) - 1)
 
 

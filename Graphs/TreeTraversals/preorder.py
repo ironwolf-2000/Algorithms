@@ -14,7 +14,7 @@ def preorderR(root: TreeNode | None) -> list[int]:
     Space: O(H)
     """
 
-    def preorder(root: TreeNode | None) -> list[int]:
+    def preorder(root: TreeNode | None) -> None:
         if root:
             res.append(root.val)
             for child in root.children:

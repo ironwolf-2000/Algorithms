@@ -1,7 +1,7 @@
 import random
 
 
-def partition(nums: list[int], lo: int, hi: int) -> int:
+def partition(nums: list[int], lo: int, hi: int) -> tuple[int, int]:
     pivot = nums[random.randint(lo, hi)]
     i, j, k = lo, lo, hi
 

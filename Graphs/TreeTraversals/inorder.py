@@ -16,7 +16,7 @@ def inorderR(root: TreeNode | None) -> list[int]:
     Space: O(H)
     """
 
-    def inorder(root: TreeNode | None) -> list[int]:
+    def inorder(root: TreeNode | None) -> None:
         if root:
             inorder(root.left)
             res.append(root.val)

@@ -34,7 +34,7 @@ class UnionFind:
                 self.root[root_x] = root_y
                 self.rank[root_y] += 1
 
-    def connected(self, x: int, y: int) -> None:
+    def connected(self, x: int, y: int) -> bool:
         """
         Time: O(alpha(N))
         """

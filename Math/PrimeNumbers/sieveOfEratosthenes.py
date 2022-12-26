@@ -2,7 +2,7 @@ from math import isqrt
 
 
 # finds all prime numbers < n
-def findPrimes(n: int):
+def findPrimes(n: int) -> list[int]:
     """
     Time: O(Nlog(logN))
     Space: O(N)

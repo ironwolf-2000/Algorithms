@@ -1,7 +1,7 @@
 from math import gcd
 
 
-def _lcm(a: int, b: int):
+def _lcm(a: int, b: int) -> int:
     """
     Time: O(log(a + b))
     Space: O(1)
@@ -10,7 +10,7 @@ def _lcm(a: int, b: int):
 
 
 # similar to math.lcm
-def lcm(*values: int):
+def lcm(*values: int) -> int:
     """
     N = len(values)
     M = max(values)

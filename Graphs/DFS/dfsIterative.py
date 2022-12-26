@@ -1,4 +1,4 @@
-def dfs(graph: dict[list[int]], start: int) -> list[int]:
+def dfs(graph: dict[int, list[int]], start: int) -> list[int]:
     """
     V = number of vertices in the graph
     E = number of edges in the graph

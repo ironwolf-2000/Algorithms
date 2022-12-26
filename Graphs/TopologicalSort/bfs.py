@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 
 
 # Also known as Kahn's algorithm
-def topsort(graph: dict[list[int]]) -> list[int]:
+def topsort(graph: dict[int, list[int]]) -> list[int]:
     """
     V = number of vertices in the graph
     E = number of edges in the graph
@@ -29,7 +29,8 @@ def topsort(graph: dict[list[int]]) -> list[int]:
                 q.append(v)
 
     if any(indegree.values()):
-        return "Cycle found!"
+        print("Cycle found!")
+        return []
 
     return res
 
@@ -51,4 +52,4 @@ graph = {
     2: [3],
     3: [1],
 }
-print(topsort(graph))  # Cycle found!
+print(topsort(graph))  # []

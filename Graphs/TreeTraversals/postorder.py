@@ -14,7 +14,7 @@ def postorderR(root: TreeNode | None) -> list[int]:
     Space: O(H)
     """
 
-    def postorder(root: TreeNode | None) -> list[int]:
+    def postorder(root: TreeNode | None) -> None:
         if root:
             for child in root.children:
                 postorder(child)

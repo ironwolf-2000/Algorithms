@@ -1,5 +1,5 @@
 # v1: recursive
-def pow(x: int, n: int) -> int:
+def pow(x: float, n: int) -> float:
     """
     Time: O(logN)
     Space: O(logN)
@@ -14,7 +14,7 @@ def pow(x: int, n: int) -> int:
 
 
 # v2: iterative
-def pow(x: int, n: int) -> int:
+def pow(x: float, n: int) -> float:
     """
     Time: O(logN)
     Space: O(1)
