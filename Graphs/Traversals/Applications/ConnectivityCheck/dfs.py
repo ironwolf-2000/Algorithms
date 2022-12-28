@@ -1,4 +1,4 @@
-def check(graph: dict[int, list[int]]) -> bool:
+def isConnected(graph: dict[int, list[int]]) -> bool:
     """
     V = number of vertices in the graph
     E = number of edges in the graph
@@ -28,7 +28,7 @@ graph = {
     4: [1, 3],
     5: [2],
 }
-print(check(graph))  # False
+print(isConnected(graph))  # False
 
 graph = {
     1: [3, 4],
@@ -37,4 +37,4 @@ graph = {
     4: [1, 3],
     5: [2],
 }
-print(check(graph))  # True
+print(isConnected(graph))  # True
