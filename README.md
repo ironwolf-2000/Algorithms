@@ -12,15 +12,48 @@ An open library of common algorithms implemented in Python.
 ## Implemented Algorithms
 
 <details>
+<summary>Graphs</summary>
+
+-   Shortest Paths
+    -   Dijkstra
+-   Spanning Trees
+    -   Kruskal's Algorithm
+    -   Prim's Algorithm
+-   Traversals
+    -   Applications
+        -   Bipartiteness Check
+        -   Connectivity Check
+        -   Cycle Detection
+        -   Finding Components
+        -   Topological Sort
+    -   BFS
+    -   DFS
+-   Trees
+    -   Traversals
+        -   Inorder
+        -   Level Order
+        -   Postorder
+        -   Preorder
+    -   Diameter
+
+</details>
+
+<details>
 <summary>Math</summary>
 
 -   Convex Hull
     -   Graham Scan
     -   Jarvis March
     -   Monotone Chain
+-   Functions
+    -   Pow
+    -   Sqrt
 -   GCD
 -   LCM
--   Sieve of Eratosthenes
+-   Prime Numbers
+    -   Factorization
+    -   Primality Test
+    -   Sieve of Eratosthenes
 
 </details>
 
