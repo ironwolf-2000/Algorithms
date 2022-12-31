@@ -85,3 +85,10 @@ An open library of common algorithms implemented in Python.
 -   Selection Sort
 
 </details>
+
+<details>
+<summary>Strings</summary>
+
+-   Z-algorithm
+
+</details>
