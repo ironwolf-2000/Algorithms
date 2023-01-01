@@ -1,25 +1,18 @@
 class ZAlgorithm:
-    def calculate(self, s: str) -> list[int]:
+    def calculateZ(self, s: str) -> list[int]:
         z = [0] * len(s)
-        left = right = 0
+        L, R = 0, 0
 
-        for i in range(1, len(s)):
-            if i > right:
-                left = right = i
-                while right < len(s) and s[right] == s[right - left]:
-                    right += 1
-                z[i] = right - left
-                right -= 1
+        for j in range(1, len(s)):
+            if j + z[j - L] <= R:
+                z[j] = z[j - L]
             else:
-                k = i - left
-                if i + z[k] <= right:
-                    z[i] = z[k]
-                else:
-                    left = i
-                    while right < len(s) and s[right] == s[right - left]:
-                        right += 1
-                    z[i] = right - left
-                    right -= 1
+                L, R = j, max(R, j)
+                while R < len(s) and s[R] == s[R - L]:
+                    R += 1
+
+                z[j] = R - L
+                R -= 1
 
         return z
 
@@ -31,8 +24,15 @@ class ZAlgorithm:
         Time: O(N + M)
         Space: O(N + M)
         """
-        z = self.calculate(f"{pattern}${text}")
-        return [i - len(pattern) - 1 for i in range(len(z)) if z[i] == len(pattern)]
+        z = self.calculateZ(f"{pattern}${text}")
+        res = []
+
+        for i, el in enumerate(z):
+            if el == len(pattern):
+                res.append(i - el - 1)
+
+        return res
 
 
-print(ZAlgorithm().findMatches("abaxabab", "aba"))  # [0, 4]
+print(ZAlgorithm().findMatches("aabxaayaab", "aab"))  # [0, 7]
+print(ZAlgorithm().findMatches("abacababadac", "aba"))  # [0, 4, 6]
