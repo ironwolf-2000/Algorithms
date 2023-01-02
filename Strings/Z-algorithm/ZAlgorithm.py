@@ -1,5 +1,12 @@
 class ZAlgorithm:
     def calculateZ(self, s: str) -> list[int]:
+        """
+        N = len(text)
+        M = len(pattern)
+        -------------
+        Time: O(N + M)
+        Space: len(s) = O(N + M)
+        """
         z = [0] * len(s)
         L, R = 0, 0
 
@@ -24,6 +31,9 @@ class ZAlgorithm:
         Time: O(N + M)
         Space: O(N + M)
         """
+        if not pattern:
+            return [0]
+
         z = self.calculateZ(f"{pattern}${text}")
         res = []
 
@@ -36,3 +46,5 @@ class ZAlgorithm:
 
 print(ZAlgorithm().findMatches("aabxaayaab", "aab"))  # [0, 7]
 print(ZAlgorithm().findMatches("abacababadac", "aba"))  # [0, 4, 6]
+print(ZAlgorithm().findMatches("abxabcabcaby", "abcaby"))  # [6]
+print(ZAlgorithm().findMatches("ababab", "abab"))  # [0, 2]
