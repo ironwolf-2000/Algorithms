@@ -1,11 +1,10 @@
 class ZAlgorithm:
     def calculateZ(self, s: str) -> list[int]:
         """
-        N = len(text)
-        M = len(pattern)
+        N + M = len(s)
         -------------
         Time: O(N + M)
-        Space: len(s) = O(N + M)
+        Space: O(N + M)
         """
         z = [0] * len(s)
         L, R = 0, 0
