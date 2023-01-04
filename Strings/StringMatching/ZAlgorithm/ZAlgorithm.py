@@ -1,5 +1,6 @@
 class ZAlgorithm:
-    def calculateZ(self, s: str) -> list[int]:
+    @staticmethod
+    def calculateZ(s: str) -> list[int]:
         """
         N + M = len(s)
         -------------
@@ -9,20 +10,21 @@ class ZAlgorithm:
         z = [0] * len(s)
         L, R = 0, 0
 
-        for j in range(1, len(s)):
-            if j + z[j - L] <= R:
-                z[j] = z[j - L]
+        for i in range(1, len(s)):
+            if i + z[i - L] <= R:
+                z[i] = z[i - L]
             else:
-                L, R = j, max(R, j)
+                L, R = i, max(R, i)
                 while R < len(s) and s[R] == s[R - L]:
                     R += 1
 
-                z[j] = R - L
+                z[i] = R - L
                 R -= 1
 
         return z
 
-    def findMatches(self, text: str, pattern: str) -> list[int]:
+    @staticmethod
+    def findMatches(text: str, pattern: str) -> list[int]:
         """
         N = len(text)
         M = len(pattern)
@@ -33,7 +35,7 @@ class ZAlgorithm:
         if not pattern:
             return [0]
 
-        z = self.calculateZ(f"{pattern}${text}")
+        z = ZAlgorithm.calculateZ(f"{pattern}${text}")
         res = []
 
         for i, el in enumerate(z):
@@ -43,7 +45,11 @@ class ZAlgorithm:
         return res
 
 
-print(ZAlgorithm().findMatches("aabxaayaab", "aab"))  # [0, 7]
-print(ZAlgorithm().findMatches("abacababadac", "aba"))  # [0, 4, 6]
-print(ZAlgorithm().findMatches("abxabcabcaby", "abcaby"))  # [6]
-print(ZAlgorithm().findMatches("ababab", "abab"))  # [0, 2]
+# Examples
+if __name__ == "__main__":
+    print(ZAlgorithm.findMatches("aabxaayaab", "aab"))  # [0, 7]
+    print(ZAlgorithm.findMatches("abacababadac", "aba"))  # [0, 4, 6]
+    print(ZAlgorithm.findMatches("abxabcabcaby", "abcaby"))  # [6]
+    print(ZAlgorithm.findMatches("", "abab"))  # []
+    print(ZAlgorithm.findMatches("abc", ""))  # [0]
+    print(ZAlgorithm.findMatches("", ""))  # [0]

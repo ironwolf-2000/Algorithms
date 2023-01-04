@@ -1,5 +1,6 @@
 class KMP:
-    def calculateLPS(self, pattern: str) -> list[int]:
+    @staticmethod
+    def calculateLPS(pattern: str) -> list[int]:
         """
         M = len(pattern)
         -------------
@@ -19,7 +20,8 @@ class KMP:
 
         return lps
 
-    def findMatches(self, text: str, pattern: str) -> list[int]:
+    @staticmethod
+    def findMatches(text: str, pattern: str) -> list[int]:
         """
         N = len(text)
         M = len(pattern)
@@ -30,7 +32,7 @@ class KMP:
         if not pattern:
             return [0]
 
-        lps = self.calculateLPS(pattern)
+        lps = KMP.calculateLPS(pattern)
         res, i = [], 0
 
         for j in range(len(text)):
@@ -47,7 +49,11 @@ class KMP:
         return res
 
 
-print(KMP().findMatches("aabxaayaab", "aab"))  # [0, 7]
-print(KMP().findMatches("abacababadac", "aba"))  # [0, 4, 6]
-print(KMP().findMatches("abxabcabcaby", "abcaby"))  # [6]
-print(KMP().findMatches("ababab", "abab"))  # [0, 2]
+# Examples
+if __name__ == "__main__":
+    print(KMP.findMatches("aabxaayaab", "aab"))  # [0, 7]
+    print(KMP.findMatches("abacababadac", "aba"))  # [0, 4, 6]
+    print(KMP.findMatches("abxabcabcaby", "abcaby"))  # [6]
+    print(KMP.findMatches("", "abab"))  # []
+    print(KMP.findMatches("abc", ""))  # [0]
+    print(KMP.findMatches("", ""))  # [0]
