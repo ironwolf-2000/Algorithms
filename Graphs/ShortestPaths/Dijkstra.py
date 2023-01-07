@@ -3,7 +3,7 @@ from heapq import heappop, heappush
 from math import inf
 
 
-def dijkstra(G: list[list[tuple[int, int]]], start: int, end: int) -> float | int:
+def dijkstra(G: dict[int, list[tuple[int, int]]], start: int, end: int) -> float | int:
     """
     V = number of vertices in the graph
     E = number of edges in the graph
@@ -17,7 +17,7 @@ def dijkstra(G: list[list[tuple[int, int]]], start: int, end: int) -> float | in
     parent = defaultdict(int)  # only needed to restore the path
     parent[start] = -1
 
-    q = [(0, start)]
+    q: list[tuple[int | float, int]] = [(0, start)]
 
     while q:
         d, u = heappop(q)
