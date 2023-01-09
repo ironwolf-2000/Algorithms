@@ -15,7 +15,9 @@ An open library of common algorithms implemented in Python.
 <summary>Graphs</summary>
 
 -   Shortest Paths
+    -   Bellman Ford
     -   Dijkstra
+    -   Floyd Warshall
 -   Spanning Trees
     -   Kruskal's Algorithm
     -   Prim's Algorithm
@@ -58,6 +60,15 @@ An open library of common algorithms implemented in Python.
 </details>
 
 <details>
+<summary>Miscellaneous</summary>
+
+-   Fisher Yates
+-   Kadane
+-   Reservoir Sampling
+
+</details>
+
+<details>
 <summary>Searching</summary>
 
 -   Binary Search
@@ -89,6 +100,9 @@ An open library of common algorithms implemented in Python.
 <details>
 <summary>Strings</summary>
 
--   Z-algorithm
+-   String Matching
+    -   KMP
+    -   Rabin Karp
+    -   Z-algorithm
 
 </details>
