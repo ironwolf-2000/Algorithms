@@ -12,6 +12,15 @@ An open library of common algorithms implemented in Python.
 ## Implemented Algorithms
 
 <details>
+<summary>Dynamic Programming</summary>
+
+-   Longest Common Subsequence
+-   Longest Increasing Subsequence
+    -   Patience Sorting
+
+</details>
+
+<details>
 <summary>Graphs</summary>
 
 -   Shortest Paths
@@ -31,12 +40,12 @@ An open library of common algorithms implemented in Python.
     -   BFS
     -   DFS
 -   Trees
+    -   Diameter
     -   Traversals
         -   Inorder
         -   Level Order
         -   Postorder
         -   Preorder
-    -   Diameter
 
 </details>
 
