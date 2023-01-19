@@ -41,7 +41,9 @@ An open library of common algorithms implemented in Python.
     -   DFS
 -   Trees
     -   Diameter
+    -   Lowest Common Ancestor (LCA) in a Binary Tree
     -   Traversals
+        -   Morris
         -   Inorder
         -   Level Order
         -   Postorder
