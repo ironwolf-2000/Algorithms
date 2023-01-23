@@ -16,7 +16,7 @@ class NegativeBase:
     def decimal_num(self):
         return self._decimal_num
 
-    def to_initial(self, val: int) -> list[int]:
+    def _to_initial(self, val: int) -> list[int]:
         res = []
 
         while val:
@@ -37,10 +37,9 @@ class NegativeBase:
 
         return res
 
-    def __add__(self, other: "NegativeBase") -> "NegativeBase":
-        A, B = self.num[:], other.num[:]
-        carry = 0
+    def _add(self, A: list[int], B: list[int]) -> list[int]:
         res = []
+        carry = 0
 
         while A or B or carry:
             d1, d2 = (A or [0]).pop(), (B or [0]).pop()
@@ -53,7 +52,19 @@ class NegativeBase:
         while len(res) > 1 and res[-1] == 0:
             res.pop()
 
-        return NegativeBase(self._base, res[::-1])
+        return res[::-1]
+
+    def __add__(self, other: "NegativeBase") -> "NegativeBase":
+        A = self.num[:]
+        B = other.num[:]
+
+        return NegativeBase(self._base, self._add(A, B))
+
+    def __sub__(self, other: "NegativeBase") -> "NegativeBase":
+        A = self.num[:]
+        B = [-el for el in other.num]
+
+        return NegativeBase(self._base, self._add(A, B))
 
 
 # Representation
@@ -71,3 +82,9 @@ print(nb3.decimal_num)
 print((nb1 + nb2).decimal_num)  # 0
 print((nb1 + nb3).decimal_num)  # 8246
 print((nb2 + nb3).decimal_num)  # -8080
+
+
+# Subtraction
+print((nb1 - nb2).decimal_num)  # 16326
+print((nb1 - nb3).decimal_num)  # 8080
+print((nb2 - nb3).decimal_num)  # -8246
