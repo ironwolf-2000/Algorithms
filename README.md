@@ -2,85 +2,104 @@
 
 ## Table of contents
 
--   [Overview](#overview)
+-   [Introduction](#introduction)
 -   [Implemented algorithms](#implemented-algorithms)
 
-## Overview
+    -   [Math](#math)
+        -   [Convex Hull](#convex-hull)
+        -   [Functions](#functions)
+        -   [Prime Numbers](#prime-numbers)
+        -   [Negative Base](#negative-base)
+    -   [Graphs](#graphs)
+        -   [Shortest Paths](#shortest-paths)
+        -   [Spanning Trees](#spanning-trees)
+        -   [Traversals](#traversals)
+        -   [Trees](#trees)
+    -   [Dynamic Programming](#dynamic-programming)
+        -   [Longest Common Subsequence](#longest-common-subsequence)
+        -   [Longest Increasing Subsequence](#longest-increasing-subsequence)
+    -   [Searching](#searching)
+    -   [Sorting](#sorting)
+    -   [Strings](#strings)
+        -   [String Matching](#string-matching)
+    -   [Miscellaneous](#miscellaneous)
 
-An open library of common algorithms implemented in Python.
+-   [Usage](#usage)
+-   [Contribution](#contribution)
+
+## Introduction
+
+Welcome to the Algorithm Python repository, where you'll find a comprehensive collection of common algorithms implemented in the Python language. Whether you're a beginner or an experienced developer, you'll find everything you need to take your coding skills to the next level.
 
 ## Implemented Algorithms
 
-<details>
-<summary>Dynamic Programming</summary>
+### Math
 
--   Longest Common Subsequence
--   Longest Increasing Subsequence
-    -   Patience Sorting
+#### Convex Hull
 
-</details>
+-   Graham Scan
+-   Jarvis March
+-   Monotone Chain
 
-<details>
-<summary>Graphs</summary>
+#### Functions
 
--   Shortest Paths
-    -   Bellman Ford
-    -   Dijkstra
-    -   Floyd Warshall
--   Spanning Trees
-    -   Kruskal's Algorithm
-    -   Prim's Algorithm
--   Traversals
-    -   Applications
-        -   Bipartiteness Check
-        -   Connectivity Check
-        -   Cycle Detection
-        -   Finding Components
-        -   Topological Sort
-    -   BFS
-    -   DFS
--   Trees
-    -   Diameter
-    -   Lowest Common Ancestor (LCA) in a Binary Tree
-    -   Traversals
-        -   Morris
-        -   Inorder
-        -   Level Order
-        -   Postorder
-        -   Preorder
-
-</details>
-
-<details>
-<summary>Math</summary>
-
--   Convex Hull
-    -   Graham Scan
-    -   Jarvis March
-    -   Monotone Chain
--   Functions
-    -   Pow
-    -   Sqrt
+-   Pow
+-   Sqrt
 -   GCD
 -   LCM
--   Prime Numbers
-    -   Factorization
-    -   Primality Test
-    -   Sieve of Eratosthenes
 
-</details>
+#### Prime Numbers
 
-<details>
-<summary>Miscellaneous</summary>
+-   Factorization
+-   Primality Test
+-   Sieve of Eratosthenes
 
--   Fisher Yates
--   Kadane
--   Reservoir Sampling
+#### Negative Base
 
-</details>
+### Graphs
 
-<details>
-<summary>Searching</summary>
+#### Shortest Paths
+
+-   Bellman Ford
+-   Dijkstra
+-   Floyd Warshall
+
+#### Spanning Trees
+
+-   Kruskal's Algorithm
+-   Prim's Algorithm
+
+#### Traversals
+
+-   Applications
+    -   Bipartiteness Check
+    -   Connectivity Check
+    -   Cycle Detection
+    -   Finding Components
+    -   Topological Sort
+-   BFS
+-   DFS
+
+#### Trees
+
+-   Diameter
+-   Lowest Common Ancestor (LCA) in a Binary Tree
+-   Traversals
+    -   Morris
+    -   Inorder
+    -   Level Order
+    -   Postorder
+    -   Preorder
+
+### Dynamic Programming
+
+#### Longest Common Subsequence
+
+#### Longest Increasing Subsequence
+
+-   Patience Sorting
+
+### Searching
 
 -   Binary Search
 -   Exponential Search
@@ -88,10 +107,7 @@ An open library of common algorithms implemented in Python.
 -   Quick Select
 -   Ternary Search
 
-</details>
-
-<details>
-<summary>Sorting</summary>
+### Sorting
 
 -   Bubble Sort
 -   Bucket Sort
@@ -106,14 +122,26 @@ An open library of common algorithms implemented in Python.
 -   Radix Sort
 -   Selection Sort
 
-</details>
+### Strings
 
-<details>
-<summary>Strings</summary>
+#### String Matching
 
--   String Matching
-    -   KMP
-    -   Rabin Karp
-    -   Z-algorithm
+-   KMP
+-   Rabin Karp
+-   Z-algorithm
 
-</details>
+### Miscellaneous
+
+-   Fisher Yates
+-   Kadane
+-   Reservoir Sampling
+
+## Usage
+
+To use the algorithms, simply import the desired algorithm from the respective module. The functions are well-documented and easy to understand.
+
+## Contribution
+
+We welcome contributions to this repository. If you would like to add an algorithm or improve an existing one, please submit a pull request.
+
+Please make sure to follow the code style and formatting used in the existing code and include thorough documentation for the algorithm you are adding or modifying.
