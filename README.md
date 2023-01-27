@@ -1,28 +1,17 @@
 # Algorithms in Python
 
-## Table of contents
+## Table of Contents
 
 -   [Introduction](#introduction)
--   [Implemented algorithms](#implemented-algorithms)
+-   [Implemented Algorithms](#implemented-algorithms)
 
-    -   [Math](#math)
-        -   [Convex Hull](#convex-hull)
-        -   [Functions](#functions)
-        -   [Prime Numbers](#prime-numbers)
-        -   [Negative Base](#negative-base)
-    -   [Graphs](#graphs)
-        -   [Shortest Paths](#shortest-paths)
-        -   [Spanning Trees](#spanning-trees)
-        -   [Traversals](#traversals)
-        -   [Trees](#trees)
-    -   [Dynamic Programming](#dynamic-programming)
-        -   [Longest Common Subsequence](#longest-common-subsequence)
-        -   [Longest Increasing Subsequence](#longest-increasing-subsequence)
-    -   [Searching](#searching)
-    -   [Sorting](#sorting)
-    -   [Strings](#strings)
-        -   [String Matching](#string-matching)
-    -   [Miscellaneous](#miscellaneous)
+    -   [Math](https://github.com/ironwolf-2000/Algorithms/tree/main/Math)
+    -   [Graphs](https://github.com/ironwolf-2000/Algorithms/tree/main/Graphs)
+    -   [Dynamic Programming](https://github.com/ironwolf-2000/Algorithms/tree/main/DynamicProgramming)
+    -   [Searching](https://github.com/ironwolf-2000/Algorithms/tree/main/Searching)
+    -   [Sorting](https://github.com/ironwolf-2000/Algorithms/tree/main/Sorting)
+    -   [Strings](https://github.com/ironwolf-2000/Algorithms/tree/main/Strings)
+    -   [Miscellaneous](https://github.com/ironwolf-2000/Algorithms/tree/main/Miscellaneous)
 
 -   [Usage](#usage)
 -   [Contribution](#contribution)
@@ -33,108 +22,9 @@ Welcome to the Algorithm Python repository, where you'll find a comprehensive co
 
 ## Implemented Algorithms
 
-### Math
+All the algorithms presented here are my implementations that I used on different coding platforms and tested in many problems. So, they are 100% working solutions.
 
-#### Convex Hull
-
--   Graham Scan
--   Jarvis March
--   Monotone Chain
-
-#### Functions
-
--   Pow
--   Sqrt
--   GCD
--   LCM
-
-#### Prime Numbers
-
--   Factorization
--   Primality Test
--   Sieve of Eratosthenes
-
-#### Negative Base
-
-### Graphs
-
-#### Shortest Paths
-
--   Bellman Ford
--   Dijkstra
--   Floyd Warshall
-
-#### Spanning Trees
-
--   Kruskal's Algorithm
--   Prim's Algorithm
-
-#### Traversals
-
--   Applications
-    -   Bipartiteness Check
-    -   Connectivity Check
-    -   Cycle Detection
-    -   Finding Components
-    -   Topological Sort
--   BFS
--   DFS
-
-#### Trees
-
--   Diameter
--   Lowest Common Ancestor (LCA) in a Binary Tree
--   Traversals
-    -   Morris
-    -   Inorder
-    -   Level Order
-    -   Postorder
-    -   Preorder
-
-### Dynamic Programming
-
-#### Longest Common Subsequence
-
-#### Longest Increasing Subsequence
-
--   Patience Sorting
-
-### Searching
-
--   Binary Search
--   Exponential Search
--   Jump Search
--   Quick Select
--   Ternary Search
-
-### Sorting
-
--   Bubble Sort
--   Bucket Sort
--   Counting Sort
--   Insertion Sort
--   Merge Sort
-    -   Iterative version
-    -   Recursive version
--   Quick Sort
-    -   Three way partitioning
-    -   Two way partitioning
--   Radix Sort
--   Selection Sort
-
-### Strings
-
-#### String Matching
-
--   KMP
--   Rabin Karp
--   Z-algorithm
-
-### Miscellaneous
-
--   Fisher Yates
--   Kadane
--   Reservoir Sampling
+Every algorithm section is well documented and contains several examples demonstrating how it works. Moreover, you can find an in-depth description of each algorithm in its corresponding folder.
 
 ## Usage
 
@@ -142,6 +32,6 @@ To use the algorithms, simply import the desired algorithm from the respective m
 
 ## Contribution
 
-We welcome contributions to this repository. If you would like to add an algorithm or improve an existing one, please submit a pull request.
+I welcome contributions to this repository. If you would like to add an algorithm or improve an existing one, please submit a pull request.
 
 Please make sure to follow the code style and formatting used in the existing code and include thorough documentation for the algorithm you are adding or modifying.
