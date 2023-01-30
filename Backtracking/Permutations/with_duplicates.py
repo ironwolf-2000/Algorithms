@@ -6,7 +6,7 @@ def permute(nums: list[int]) -> list[list[int]]:
     N = len(nums)
     ---------------
     Time: O(N! * N)
-    Space: O(N), excluding output
+    Space: O(N), excluding the output
     """
 
     def backtrack(cur: list[int], count: dict[int, int]) -> list[list[int]]:

@@ -2,7 +2,7 @@
 def combine(n: int, k: int) -> list[list[int]]:
     """
     Time: O(C(n,k) * k), where C(n,k) is the binomial coefficient
-    Space: O(k), excluding output
+    Space: O(k), excluding the output
     """
 
     def backtrack(i: int, cur: list[int]) -> list[list[int]]:
